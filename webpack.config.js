@@ -8,13 +8,17 @@ module.exports = {
 		publicPath: '/dist/',
 		filename: 'build.js'
 	},
-
+	// externals: [
+	// 	{
+	// 		'jquery': 'window.jQuery'
+	// 	}
+	// ],
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
-				exclude: /node_modules/				
+				exclude: /node_modules/
 			},
 			{
 				test: /\.scss$/,
@@ -22,7 +26,7 @@ module.exports = {
 			}
 
 		]
-		
+
 	},
 
 	devServer: {

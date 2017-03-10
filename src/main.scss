@@ -4,11 +4,231 @@
 
 }
 
+@mixin tubecom{
+	width: 10px;  //管粗
+	background: #333;
+	position: absolute;
+	// transform-origin: left;
+}
+
+@-webkit-keyframes rotate{
+
+  0%{-webkit-transform:rotate(0deg); -webkit-transform-origin: center right;}
+  50%{-webkit-transform:rotate(-180deg);-webkit-transform-origin: center right;}
+  100%{-webkit-transform:rotate(0deg);-webkit-transform-origin: center right;}
+}
+@-moz-keyframes rotate{
+  from{-moz-transform:rotate(0deg)}
+  to{-moz-transform:rotate(-180deg)}
+}
+@-ms-keyframes rotate{
+  from{-ms-transform:rotate(0deg)}
+  to{-ms-transform:rotate(-180deg)}
+}
+@-o-keyframes rotate{
+  from{-o-transform:rotate(0deg)}
+  to{-o-transform:rotate(-180deg)}
+}
+
+.horizontal{
+  transform: rotate(90deg);
+}
 
 #container{
+	.leading{
+		width: 30px;
+		height:30px;
+		background: #3cb751;
+		border-radius: 50%;
+	}
 	width: 1300px;
 	height: 600px;
 	margin: 50vh auto 0;
 	transform: translateY(-50%);
 	border: 5px solid #333;
+	.tube{
+		position: relative;
+		div{
+			@include tubecom;
+		}
+		.t_1{
+			height: 120px;
+			top: 200px;
+			left: 135px;
+		}
+		.t_1.in{
+      left: 85px;
+			transform: rotate(90deg) translate(50px,0px);
+		}
+		.t_2{
+      left:190px;
+      top: 260px;
+			height: 200px;
+		}
+    .t_2.in{
+      transform: translateX(-50px);
+      height: 195px;
+      top: 310px;
+    }
+    .t_3 {
+      left:220px;
+      height: 170px;
+      top: 425px;
+    }
+    .t_3.in{
+      height: 60px;
+      top: 475px;
+      transform: rotate(90deg) translateX(-50px);
+    }
+    .t_4{
+      left: 300px;
+      top:205px;
+      height:300px;
+    }
+    .t_4.in{
+      top: 80px;
+      height:380px;
+      transform:translateX(-50px);
+    }
+    .c{
+      height:60px;
+      top:50px;
+      left: 280px;
+    }
+    .t_5{
+      height: 310px;
+      left: 355px;
+      top:200px;
+      transform: rotate(-20deg);
+    }
+    .t_5.in{
+      height:400px;
+      top:80px;
+      left:330px;
+      transform: rotate(-20deg) translate(50px,0);
+    }
+    .t_6{
+      height: 100px;
+      left:492px;
+      top: 400px;
+    }
+    .t_6.in{
+      height: 185px;
+      top: 360px;
+      left: 497px;
+      transform: rotate(90deg) translate(50px,0);
+    }
+    .t_7{
+      height: 160px;
+      top: 350px;
+      left: 590px;
+    }
+    .t_7.in{
+      height:60px;
+      top: 395px;
+      transform: translate(-50px,0);
+    }
+    .t_8{
+      height: 50px;
+      left: 570px;
+      top: 320px;
+    }
+    .t_8.in{
+      left: 520px;
+      transform: rotate(90deg) translateX(50px);
+    }
+    .t_9{
+      height: 180px;
+      left: 500px;
+      top: 220px;
+    }
+    .t_9.in{
+      height: 80px;
+      top: 270px;
+      transform: translateX(50px);
+    }
+    .t_10{
+      height: 210px;
+      left:600px;
+      top: 120px;
+    }
+    .t_10.in{
+      left: 650px;
+      transform: rotate(90deg) translateX(50px);
+    }
+    .t_11{
+      height: 75px;
+      left: 700px;
+      top: 145px;
+    }
+    .t_11.in{
+      height: 170px;
+      top: 100px;
+      transform: translate(50px,0);
+    }
+    .t_12{
+      height: 250px;
+      left: 580px;
+      top: 20px;
+    }
+    .t_12.in{
+      height: 250px;
+      top:20px;
+      left: 630px;
+      transform: rotate(90deg) translateX(-50px);
+    }
+
+    .t_13{
+      height: 50px;
+      left:500px;
+      top:50px;
+    }
+    .t_13.in{
+      transform: translateX(-50px);
+      height: 150px;
+      top: 0px;
+    }
+
+    .t_14{
+      height: 250px;
+      left: 630px;
+      top: -70px;
+    }
+
+    .t_14.in{
+      height: 340px;
+      top: -120px;
+      left: 615px;
+      transform: rotate(90deg) translateX(-50px);
+    }
+
+    .t_15{
+      transform: rotate(-32deg);
+      height: 550px;
+      top: 12px;
+      left: 899px;
+    }
+    .t_15.in{
+      height: 210px;
+      left: 795px;
+      top:10px;
+      transform: rotate(-32deg) translateX(50px);
+    }
+
+    .t_16{
+      width: 150px;
+      height: 65px;
+      box-sizing: border-box;
+      background: none;
+      left: 910px;
+      top: 180px;
+      border: 10px solid #333;
+      border-left: none;
+      animation: 35s linear 0s normal none infinite rotate;
+      -webkit-animation:35s linear 0s normal none infinite rotate;
+
+
+    }
+
+	}
 }
