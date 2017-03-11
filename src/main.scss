@@ -34,16 +34,34 @@
   transform: rotate(90deg);
 }
 
+header,footer{
+  text-align:center;
+  font-size: 1.5rem;
+  line-height: 30px;
+  position: absolute;
+  width: 800px;
+  height: 30px;
+  margin: 0 auto;
+}
+header{
+  top: 30px;
+  text-align: center;
+}
+footer{
+  bottom: 30px;
+}
 #container{
 
 
 	width: 1300px;
-	height: 600px;
+	height: 550px;
 	margin: 50vh auto 0;
+  padding-top:20px;
 	transform: translateY(-50%);
 	border: 5px solid #333;
 	.tube{
 		position: relative;
+
 		div{
 			@include tubecom;
 		}
