@@ -35,12 +35,8 @@
 }
 
 #container{
-	.leading{
-		width: 30px;
-		height:30px;
-		background: #3cb751;
-		border-radius: 50%;
-	}
+
+
 	width: 1300px;
 	height: 600px;
 	margin: 50vh auto 0;
@@ -51,6 +47,16 @@
 		div{
 			@include tubecom;
 		}
+    .leading{
+      display: block;
+      width: 30px;
+      height:30px;
+      background: #3cb751;
+      position: absolute;
+      left: 0px;
+      top: 270px;
+      // border-radius: 50%;
+    }
 		.t_1{
 			height: 120px;
 			top: 200px;
